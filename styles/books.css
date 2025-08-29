@@ -1,0 +1,278 @@
+
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+      min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+
+}
+
+.header_item-container {
+
+    border: 3px solid #ada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav {
+    border: 1px solid #48e;
+    padding: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 91%;
+
+
+}
+
+.nav_item {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #47e;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav_item:hover {
+    background-color: #48e;
+    color: #fff;
+}
+
+.nav_link:hover {
+    background-color: #18233F;
+    color: #fff;
+}
+
+.header_img {
+    border: 5px solid #000;
+}
+
+.header_logo {
+    border: 5px solid #4f4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/*------------MAIN --------*/
+
+.main {
+    background-color: #e5e7eb;
+    flex: 1;
+
+}
+
+.container-card {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-width: 2px;
+    border-color: #4b5563;
+    background-color: #bfdbfe;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------CREACION DE TARJETAS------------------*/
+/* CARD PRINCIPAL */
+.card {
+    border: 2px solid black;
+    margin: 1.25rem;/* m-5 */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* corregí el "beetwen" */
+    width: 20rem; /* w-80 */
+    text-align: center;
+    background-color: #ddd6fe; /* bg-violet-200 */
+}
+
+/* RESPONSIVE */
+/* @media (min-width: 640px) {
+  .card {
+    width: 66.666%; 
+    height: 83.333%; 
+  }
+} */
+
+
+/* IMAGEN */
+.card-img {
+    height: 15rem;
+    width: 20rem;
+    /* object-fit: cover; */
+    /* object-position: top; */
+    object-fit: contain;
+}
+
+/* @media (min-width: 640px) {
+  .card-img {
+    width: 15rem; 
+    height: 7rem;  
+  }
+} */
+
+/* TITULO */
+.card-title {
+    font-weight: bold;
+}
+
+/* TAGLINE */
+.card-tagline {
+    padding: 0.5rem; /* p-2 */
+    font-size: 0.75rem;/* text-xs */
+    font-weight: bolder;
+}
+
+/* @media (min-width: 640px) {
+  .card-tagline {
+    padding: 0.25rem; 
+  }
+} */
+
+/* OVERVIEW */
+.card-overview {
+    padding: 0.75rem;/* p-3 */
+    font-size: 0.75rem;
+    font-weight: bolder;
+}
+
+/* @media (min-width: 640px) {
+  .card-overview {
+    padding: 0.25rem; 
+  }
+} */
+
+/* CONTENEDOR DEL BOTON */
+.card-btn-container {
+    display: flex;
+    justify-content: center;
+    width: 3rem;/* w-12 */
+    border: 3px solid black;/* border-[3px] */
+    margin-top: auto;
+}
+
+.card-btn-container:hover {
+    border: 2px solid black;
+    color: #f9fafb; /* text-gray-50 */
+}
+
+/* BOTÓN BASE */
+.btn-like {
+    font-weight: bold;
+    padding: 0.5rem 1rem; 
+    border: none;
+    cursor: pointer;
+}
+
+/* ESTADOS DEL BOTON SEGUN JS */
+.btn-liked {
+    background-color: #ef4444;/* bg-orange-500 */
+    color: white;
+}
+
+.btn-liked:hover {
+    background-color: #991b1b;; /* hover:bg-orange-700 */
+}
+
+.btn-not-liked {
+    background-color: #bbf7d0;/* bg-green-200 */
+    color: black;
+}
+
+.btn-not-liked:hover {
+    background-color: #374151; /* hover:bg-gray-700 */
+    color: white;
+}
+
+
+
+/* ESTILOS DEL INPUT DE BUSQUEDA */
+.search-input {
+margin-left: 5rem;
+padding: 8px 16px;
+border-radius: 20px;
+border: 2px solid #a78bfa;
+background: #f3f0ff;
+width: 350px;
+font-size: 1.1rem;
+transition: box-shadow 0.2s, background 0.2s;
+}
+
+.search-input:focus {
+outline: none;
+background: #ede9fe;
+box-shadow: 0 0 8px 2px #BFDBFE;
+border-color: #48e;
+}
+
+.option-inicial {
+padding: 8px 16px;
+border-radius: 12px;
+background: #f3f0ff;
+font-size: 1.1rem;
+/* color: #6c3fc7; */
+width: 350px;
+border: none;
+}
+
+
+/*------------FOOTER SECTION--------*/
+
+
+/* FOOTER */
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: #18233f;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 1.1rem;
+    margin-top: 32px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/formulario.css">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/x-icon">
+
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_item-container">
+            <!-- <div class="header_img"> -->
+            <img src="../assets/img/logo.jpg" alt="Logo" class="header_logo">
+            <!-- </div> -->
+            <nav class="nav">
+                <a href="../index.html" class="nav_link">Home</a>
+                <a href="../pages/books.html" class="nav_link">Libros</a>
+                <a href="../pages/favs.html" class="nav_link">Favoritos</a>
+                <a href="#" class="nav_item">Formularios</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section>
+            <h2 class="main_subtittle">Formulario de Registro</h2>
+            <form class="form" action="../show_data.html" method="get">
+                <fieldset class="fieldset">
+                    <legend>Datos Personales</legend>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <div class="especial-input">
+                        <label for="city">Ciudad</label>
+                        <input type="text" name="city" id="city">
+
+                        <label for="cellphone">Telefono</label>
+                        <input type="text" name="cellphone" id="cellphone">
+                    </div>
+                    <div class="date-div">
+                        <label for="date">Fecha de Nacimiento</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+
+                    <div class="gender_div">
+                        <div class="gender-options">Genero:
+                            <label for="male">Masculino</label>
+                            <input type="radio" id="male" name="gender" value="male" >
+                            <label for="female">Femenino</label>
+                            <input type="radio" id="female" name="gender" value="female"  >
+                            <label for="otro">Otro</label>
+                            <input type="radio" id="otro" name="gender" value="otro"  >
+                        </div>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="fieldset2">
+                    <legend>Mas informacion</legend>
+                    <label for="libro">Has visitado nuesta pagina antes?</label>
+                    <select name="libro" id="libro">
+                        <option value="" disabled selected>Select a option</option>
+                        <option value="si">si he vistado</option>
+                        <option value="no">es mi primera vez</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="fieldset3">
+                    <legend>Datos Extra</legend>
+                    <h4>Cuales son tus tematicas favoritas? (selecciona una o varias opciones)</h4>
+                    <label>Drama
+                        <input type="checkbox" name="type-book" value="drama">
+                    </label>
+
+                    <label>Misterio
+                        <input type="checkbox" name="type-book" value="misterio">
+                    </label>
+
+                    <label>Comedia
+                        <input type="checkbox" name="type-book" value="comedia">
+                    </label>
+
+                    <label>Fantasia
+                        <input type="checkbox" name="type-book" value="fantasia">
+                    </label>
+
+                    <label>Aventura
+                        <input type="checkbox" name="type-book" value="aventura">
+                    </label>
+
+                    <label>Terror
+                        <input type="checkbox" name="type-book" value="terror">
+                    </label>
+
+                    <label>Suspenso
+                        <input type="checkbox" name="type-book" value="suspenso">
+                    </label>
+                </fieldset>
+                <button>Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h3>Todos los derechos reservados - 2025</h3>
+    </footer>
+    <script src="../js/formulario.js"></script>
+
+</body>
+
+</html>
