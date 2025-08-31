@@ -280,3 +280,82 @@ cursor: pointer;
     font-size: 1.1rem;
     margin-top: 32px;
 }
+
+
+/*----------  MEDIA QUERIES ------------ */
+/* PC (>1200px) */
+@media screen and (min-width: 1200px) {
+
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.3rem;
+        padding: 32px 0;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.15rem;
+        padding: 28px 0;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+
+}
+/* Celular (<480px) */
+@media screen and (max-width: 480px) {
+
+        /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
+.header_item-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+        gap: 6px;
+    }
+    .header_logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 4px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 0.95rem;
+        gap: 4px;
+        padding: 4px 0;
+    }
+    .nav_item, .nav_link {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 2px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 0.95rem;
+        padding: 14px 0;
+        margin-top: 16px;
+    }
+    .footer h3 {
+        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 1.3;
+    }
+}
