@@ -172,16 +172,11 @@ header {
 /*CREACION DE LAS TARJETAS */
 
 .div-card {
-    border: 2px solid #000000;
-    /* Tailwind usa solid por defecto */
-    margin: 1.25rem;
-    /* m-5 */
-    height: auto;
-    /* h-auto */
-    display: flex;
-    /* flex */
-    flex-direction: column;
-    /* flex-col */
+    border: 2px solid #000000;/* Tailwind usa solid por defecto */
+    margin: 1.25rem;/* m-5 */
+    height: auto;/* h-auto */
+    display: flex;/* flex */
+    flex-direction: column;/* flex-col */
     align-items: center;
     /* items-center */
     justify-content: space-between;

@@ -27,23 +27,23 @@ console.log(arrayFavoritos);
 
 
 
-//esta funcion toma como parametro un objeto peliculas y crea en html la estructura de la carta.
+//esta funcion toma como parametro un objeto libros y crea en html la estructura de la carta.
 
-function createCards(peliculas) {
+function createCards(libros) {
 
-    let estaLikeado = isLiked(peliculas.id);// estoy llamando a la funcion isLiked y le paso como argumento el id de la pelicula que despues lo uso para determinar si esta marcado el boton o no.
+    let estaLikeado = isLiked(libros.id);// estoy llamando a la funcion isLiked y le paso como argumento el id de la pelicula que despues lo uso para determinar si esta marcado el boton o no.
     return `
     <div class="card">
-    <a href="./detail.html?id=${peliculas.id}">
-        <img src="${peliculas.image}" class="card-img" alt="${peliculas.title}"/>
-        <h4 class="card-title">${peliculas.title}</h4>
-        <p class="card-tagline">${peliculas.tagline}</p>
-        <p class="card-overview">${peliculas.overview}</p> 
+    <a href="./detail.html?id=${libros.id}">
+        <img src="${libros.image}" class="card-img" alt="${libros.title}"/>
+        <h4 class="card-title">${libros.title}</h4>
+        <p class="card-tagline">${libros.tagline}</p>
+        <p class="card-overview">${libros.overview}</p> 
     </a>
     <div class="card-btn-container">
         <button 
         data-vote="true" 
-        data-id="${peliculas.id}"  
+        data-id="${libros.id}"  
         class="btn-like ${estaLikeado ? "btn-liked" : "btn-not-liked"}"
         >♡</button>
     </div> 
@@ -87,13 +87,13 @@ function createCards(peliculas) {
 
 
 //toma una rray de objetos de peliclas llamado arraPeliculas (que es el parametro de la fucnion) y genera tarjetas html
-function addCards(arrayPeliculas) {
+function addCards(arrayLibros) {
     // let divCreado = document.getElementById("container_card");
 
     divCreado.innerHTML = '';
     let respuesta = "";
-    console.log(arrayPeliculas);
-    arrayPeliculas.forEach(item => {// Se utiliza forEach para iterar sobre cada objeto de película en arrayPeliculas
+    console.log(arrayLibros);
+    arrayLibros.forEach(item => {// Se utiliza forEach para iterar sobre cada objeto de libro en arrayLibros
         respuesta += createCards(item); //el html generado por createCards se concatena a la variable respuesta.
     });
     divCreado.innerHTML += respuesta;
