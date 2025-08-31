@@ -236,8 +236,6 @@ letter-spacing: 0.5px;
 /* PC (>1200px) */
 @media screen and (min-width: 1200px) {
 
-
-    
     .section h2 {
         width: 40%;
         font-size: 2.2rem;
@@ -258,11 +256,6 @@ letter-spacing: 0.5px;
 
 /* Laptop (992px - 1199px) */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
-
-
-
-
 
     /* ↓↓↓↓↓↓ MAIN (SECTION 1 ) ↓↓↓↓↓↓*/
 
@@ -287,8 +280,6 @@ letter-spacing: 0.5px;
 
 /* Tablet (768px - 991px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
-
 
     /* ↓↓↓↓↓↓ MAIN (SECTION 1 ) ↓↓↓↓↓↓*/
     .section h2 {
