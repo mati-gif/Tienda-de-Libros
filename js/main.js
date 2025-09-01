@@ -50,28 +50,6 @@ function createCards(libros) {
     </div>
 `;
 
-
-    // `
-    //     <div class=" border-black border-2  m-5 h-auto flex flex-col items-center justify-beetwen w-80 text-center bg-violet-200  sm: w-4/6 h-5/6">
-
-    //     <a href="./detail.html?id=${peliculas.id}"  ><img src ="${peliculas.image}" class="h-40 w-80 object-cover object-top sm: w-60 h-28"  alt = ${peliculas.title}/>
-    //     <h4 class=" font-bold">${peliculas.title}</h4>
-    //     <p class="p-2 text-xs font-bolder sm: p-1">
-    //     ${peliculas.tagline}
-    //     </p>
-    //     <p class="p-3 text-xs font-bolder sm: p-1">
-    //     ${peliculas.overview}
-    //     </p> 
-    //     </a>
-    //     <div class="flex justify-center  w-12 border-black border-[3px]  mt-auto   hover: border-black hover:border-2 hover:text-gray-50 ">
-    //     <button data-vote="true" data-id="${peliculas.id}"  class="${estaLikeado ? "bg-orange-500 hover:bg-orange-700" : "bg-green-200 hover:bg-gray-700"} text-white font-bold py-2 px-4  text-black"  >♡</button>
-
-    //     </div> 
-    //     </div>
-
-    //     `
-
-
     //data-vote="true" ====> se usa para guardar un valor relacionada con el boton de like,osea despues muestro lo que aparece en consola cuando apreto el boton.
     //data-id="${peliculas.id}" =====> se usa para guardar el id de la pelicula que corresponde a la pelicula.
     //son atributos de datos personalizados en html y permiten almacenar información adicional en los elementos HTML sin necesidad de usar clases o id. 
@@ -140,13 +118,13 @@ fetch('datos.json') // 👈 pedimos el archivo local
 function verifyButtonAndFavorite(evento, data) {
 
     let esBotonLike = evento.target.dataset.vote; //accede al atributo data-vote
-    let idPeliculas = evento.target.dataset.id; //accede al atributos data-id
+    let idBooks = evento.target.dataset.id; //accede al atributos data-id
     // evento.target.classList.add("bg-orange-500");
     console.log(esBotonLike);
-    console.log(idPeliculas);
+    console.log(idBooks);
 
     if (esBotonLike) { //si esBotonLike es verdadero 
-        toggleFavorites(idPeliculas)//llama a la funcion toggleFavorites que recibe como argumento el idPeliculas 
+        toggleFavorites(idBooks)//llama a la funcion toggleFavorites que recibe como argumento el idBooks
         //que cambia el estado de favorito de la pelicula con el id dado.Es decir si la pelicula esta marcada como favorita
         //la funcion la desmarca (es decir la elimina de la lista de favoritos)y si no esta marcada la va a marcar como favorita.
 
@@ -199,15 +177,15 @@ function isLiked(id) {
 //sirve para alternar el estado de favorito de  una pelicula en la lista de favoritos almacenada en localStorage
 //osea esta función permite a los usuarios marcar o desmarcar películas como favoritas, actualizando el localStorage.
 //es decir añade o elimina el id de la pelicula del array arrayfavorites .
-function toggleFavorites(idPeliculas) {
+function toggleFavorites(idBooks) {
 
-    if (arrayFavoritos.includes(idPeliculas)) { //si ya esta incluido el like que le di, entonces sacamelo
+    if (arrayFavoritos.includes(idBooks)) { //si ya esta incluido el like que le di, entonces sacamelo
 
-        arrayFavoritos.splice(arrayFavoritos.indexOf(idPeliculas), 1) //arrayFavoritos.indexOf(idPeliculas) devuelve el índice donde idPeliculas se encuentra en el array
+        arrayFavoritos.splice(arrayFavoritos.indexOf(idBooks), 1) //arrayFavoritos.indexOf(idBooks) devuelve el índice donde idBooks se encuentra en el array
         console.log(arrayFavoritos);
     } else {// si no esta inlcuido el like que le di entonces agregamelo.
 
-        arrayFavoritos.push(idPeliculas);
+        arrayFavoritos.push(idBooks);
 
     }
 
@@ -277,10 +255,10 @@ if (containerDiv && label) {
 
 
 
-function armarSelect(arrayPeliculas) {//arrayPeliculas seria data.movies pero como no puedo poner data.movies como parametro le pongo un nombre que lo represente que seria arrayPeliculas
+function armarSelect(arrayLibros) {//arrayLibros seria data.books pero como no puedo poner data.books como parametro le pongo un nombre que lo represente que seria arrayLibros
 
 
-    let capturarGeneros = arrayPeliculas.map((genero) => { // devuelve un array que adentro tiene arrays con los generos de cada pelicula.
+    let capturarGeneros = arrayLibros.map((genero) => { // devuelve un array que adentro tiene arrays con los generos de cada libro.
         let generosCapturados = genero.genres
         return generosCapturados
     });

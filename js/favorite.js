@@ -19,13 +19,13 @@ function createCards(libro) {
 }
 
 
-function addCards(arrayPeliculas) {
+function addCards(arrayLibros) {
     let divCreado = document.getElementById("container_favs");
 
     divCreado.innerHTML = '';
     let respuesta = "";
 
-    arrayPeliculas.forEach(item => {// Se utiliza forEach para iterar sobre cada objeto de película en arrayPeliculas
+    arrayLibros.forEach(item => {// Se utiliza forEach para iterar sobre cada objeto de libro en arrayLibros
         respuesta += createCards(item); //el html generado por createCards se concatena a la variable respuesta.
     });
     divCreado.innerHTML += respuesta;
@@ -83,11 +83,11 @@ function getFavorites(allBooks) { //recibe como parametro un array con las pelic
 //es decir verifica si el elemento que disparo el evento ( el click) es un boton de favorio
 function verifyButtonAndFavorite(evento, allBooks) {//recibe como parametro el evento que desencadena la funcion y allMovies es un array que contiene todas las peliculas
     let esBotonLike = evento.target.dataset.vote;//accede al atributo data-vote
-    let idPelicula = evento.target.dataset.id;//accede al atributos data-id
+    let idBook = evento.target.dataset.id;//accede al atributos data-id
     console.log(esBotonLike);
-    console.log(idPelicula);
+    console.log(idBook);
     if (esBotonLike) {
-        toggleFavorites(idPelicula);//llama a la funcion toggleFavorites que recibe como argumento el idPeliculas que cambia el estado de favorito de la película (agregando o eliminando su id de la lista de favoritos en localStorage).
+        toggleFavorites(idBook);//llama a la funcion toggleFavorites que recibe como argumento el idBook que cambia el estado de favorito de la película (agregando o eliminando su id de la lista de favoritos en localStorage).
         getFavorites(allBooks); // Actualiza la lista de películas favoritas después de cambiar el estado del botón y las muestra en la interfaz de usuario.
     }
 }
@@ -97,7 +97,7 @@ function verifyButtonAndFavorite(evento, allBooks) {//recibe como parametro el e
 //sirve para alternar el estado de favorito de  una pelicula en la lista de favoritos almacenada en localStorage
 //osea esta función permite a los usuarios marcar o desmarcar películas como favoritas, actualizando el localStorage.
 //es decir añade o elimina el id de la pelicula del array arrayfavorites .
-function toggleFavorites(idPelicula) {
+function toggleFavorites(idBook) {
     let arrayFavoritos;// almacena el array de IDs de películas favoritas.
 
     if (localStorage.getItem("favoritos")) {
@@ -106,11 +106,11 @@ function toggleFavorites(idPelicula) {
         arrayFavoritos = [];
     }
 
-    if (arrayFavoritos.includes(idPelicula)) {//si idPelicula esta en el arrayFavoritos, es decir si ya esta dado el like
-        // arrayFavoritos = arrayFavoritos.filter(id => id !== idPelicula);
-        arrayFavoritos.splice(arrayFavoritos.indexOf(idPelicula), 1)
+    if (arrayFavoritos.includes(idBook)) {//si idBook esta en el arrayFavoritos, es decir si ya esta dado el like
+        // arrayFavoritos = arrayFavoritos.filter(id => id !== idBook);
+        arrayFavoritos.splice(arrayFavoritos.indexOf(idBook), 1)
     } else {
-        arrayFavoritos.push(idPelicula);
+        arrayFavoritos.push(idBook);
     }
 
     localStorage.setItem("favoritos", JSON.stringify(arrayFavoritos));//se actualiza el localStorage con con el nuevo contenido de arrayFavoritos y  JSON.stringify(arrayFavoritos) convierte arrayFavoritos a una string JSON antes de almacenarlo en el localStorage.
