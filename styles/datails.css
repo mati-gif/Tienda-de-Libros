@@ -96,56 +96,58 @@ header {
 
 }
 
+#detail_container {
+width: 98vw;               
+display: flex;   
+flex-direction: column;           
+justify-content: center;    
+border: 2px solid #4b5563;  
+background-color: #e5e7eb;  
+}
+
+
 /**ESTILOS PARA LAS TARJETAS */
 
 .detail-card {
-    margin: auto;
-    /* m-auto */
-    margin-top: 1.25rem;
-    /* mt-5 */
-    margin-bottom: 2.5rem;
-    /* mb-10 */
+    background: #f8f5ff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(108,63,199,0.07);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 700px;
+    width: 95vw;
     display: flex;
     flex-direction: column;
-    /* flex-col */
-    justify-content: space-evenly;
-    /* justify-evenly */
-    width: 24rem;
-    /* w-96 */
-    text-align: center;
-    /* text-center */
+    align-items: center;
+    border: 3px solid #4f4;
 }
 
 /* Imagen */
-.detail-img {
-    height: 16rem;
-    /* h-64 */
-    width: 24rem;
-    /* w-96 */
+.detalle-img {
+    height: 14rem;
+    width: 100%;
     object-fit: contain;
-    /* object-cover */
+    border: 3px solid #f4f;
+
 }
 
 /* Responsive sm: */
 @media (min-width: 640px) {
     .detail-img {
         width: 15rem;
-        /* w-60 */
         height: 7rem;
-        /* h-28 */
     }
 }
 
 .detail-table {
     background-color: white;
-    /* bg-white */
     border-radius: 0.5rem;
-    /* rounded-lg */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* shadow-md */
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
+    border: 3px solid #48e;
+
 }
 
 /* Tabla */
@@ -153,9 +155,11 @@ header {
   background-color: white;   /* bg-white */
   border-radius: 0.5rem;     /* rounded-lg */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: 5px dashed #ea2;
+
 }
 
 /* Filas */
@@ -182,45 +186,58 @@ header {
   color: #4b5563;            /* text-gray-600 */
 }
 
-/*ESTILOS ARA LAS TABLAS */
+/*ESTILOS PARA LAS TABLAS */
 /* Contenedor */
 .tabla-card {
-  margin: auto;             /* m-auto */
-  margin-top: 1.25rem;      /* mt-5 */
-  margin-bottom: 2.5rem;    /* mb-10 */
-  border: 2px solid black;  /* border-black border-2 */
-  display: flex;
-  flex-direction: column;   /* flex-col */
-  width: 50%;               /* w-2/4 */
+margin: auto;            
+margin-top: 1.25rem;      
+margin-bottom: 2.5rem;    
+border: 2px solid black;  
+display: flex;
+flex-direction: column;   
+width: 55rem; 
+gap: 20px;
 }
 
 /* Títulos */
 .tabla-title {
-  font-weight: bold;        /* font-bold */
-  font-size: 1.875rem;      /* text-3xl */
-  margin: 1.25rem;          /* m-5 */
+font-weight: bold;        
+font-size: 1.875rem;      
+    margin: 1.25rem;  
+    border: 3px solid #ea7;
+    text-align: center;
 }
 
 .tabla-subtitle {
-  font-weight: bold;        /* font-bold */
-  font-size: 1.25rem;       /* text-xl */
-  margin: 0.5rem;           /* m-2 */
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    margin: 0.5rem;   
+    border: 3px dotted #f67;
+    text-align: center;
+
 }
 
 .tabla-genres {
-  font-weight: bold;        /* font-bold */
-  font-size: 1.25rem;       /* text-xl */
-  margin: 0.5rem;           /* m-2 */
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    margin: 0.5rem;  
+    border: 3px dotted #87f;
+    text-align: center;
+
+
 }
 
 .tabla-overview {
-  font-weight: bold;        /* font-bold */
-  font-size: 1.25rem;       /* text-xl */
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    border: 3px dotted #87f;
+    text-align: center;
+
 }
 
 /* Tabla */
 .tabla-detail {
-  width: 24rem;             /* w-96 */
+  width: 100%;             /* w-96 */
   height: 10rem;            /* h-40 */
   background-color: white;  /* bg-white */
   margin: auto;             /* m-auto */
@@ -278,7 +295,7 @@ header {
         max-width: 900px;
         padding: 3em;
     }
-    .detail-img {
+    .detalle-img {
         width: 400px;
     }
     .detail-table {
@@ -303,7 +320,7 @@ header {
         max-width: 700px;
         padding: 2.5em;
     }
-    .detail-img {
+    .detalle-img {
         width: 340px;
     }
     .detail-table {
@@ -324,10 +341,10 @@ header {
 /* Tablet (768px - 991px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .detail-card {
-        max-width: 95vw;
+        max-width: 98vw;
         padding: 1.2em;
     }
-    .detail-img {
+    .detalle-img {
         width: 220px;
     }
     .detail-table {
@@ -354,21 +371,67 @@ header {
 
 /* Celular (<480px) */
 @media screen and (max-width: 480px) {
-    .detail-card {
+
+    /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
+    .header_item-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+        gap: 6px;
+    }
+    .header_logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 4px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 0.95rem;
+        gap: 4px;
+        padding: 4px 0;
+    }
+    .nav_item, .nav_link {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 2px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    /*MAIN*/
+        .detail-card {
         max-width: 99vw;
         padding: 0.5em;
         margin: 0.5em auto;
     }
-    .detail-img {
+    .detalle-img {
         width: 98vw;
         border-radius: 8px;
         margin-bottom: 1em;
     }
     .detail-table {
         font-size: 0.95rem;
+        border-radius: 4px;
     }
     .detail-cell-left, .detail-cell {
         padding: 0.3em 0.1em;
+        font-size: 0.95rem;
+    }
+
+    .detail-row, .detail-row-green {
+        display: block;
+        width: 100%;
+    }
+    .detail-table tr {
+        display: block;
+        width: 100%;
+    }
+    .detail-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
     }
     .tabla-card {
         max-width: 99vw;
@@ -386,6 +449,18 @@ header {
     }
     .tabla-cell-left, .tabla-cell {
         padding: 0.3em 0.1em;
+    }
+
+        /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 0.95rem;
+        padding: 14px 0;
+        margin-top: 16px;
+    }
+    .footer h3 {
+        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 1.3;
     }
 }
 

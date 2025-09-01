@@ -130,16 +130,8 @@ header {
     width: 20rem; /* w-80 */
     text-align: center;
     background-color: #ddd6fe; /* bg-violet-200 */
+    border-radius: 8px;
 }
-
-/* RESPONSIVE */
-/* @media (min-width: 640px) {
-  .card {
-    width: 66.666%; 
-    height: 83.333%; 
-  }
-} */
-
 
 /* IMAGEN */
 .card-img {
@@ -150,16 +142,16 @@ header {
     object-fit: contain;
 }
 
-/* @media (min-width: 640px) {
-  .card-img {
-    width: 15rem; 
-    height: 7rem;  
-  }
-} */
+
+.card a {
+    text-decoration: none;
+
+}
 
 /* TITULO */
 .card-title {
     font-weight: bold;
+    color: #991b1b;
 }
 
 /* TAGLINE */
@@ -167,39 +159,34 @@ header {
     padding: 0.5rem; /* p-2 */
     font-size: 0.75rem;/* text-xs */
     font-weight: bolder;
+    color: #1e40af; 
+
 }
 
-/* @media (min-width: 640px) {
-  .card-tagline {
-    padding: 0.25rem; 
-  }
-} */
 
 /* OVERVIEW */
 .card-overview {
     padding: 0.75rem;/* p-3 */
     font-size: 0.75rem;
     font-weight: bolder;
+    color: #1e40af; 
+
 }
 
-/* @media (min-width: 640px) {
-  .card-overview {
-    padding: 0.25rem; 
-  }
-} */
+
 
 /* CONTENEDOR DEL BOTON */
 .card-btn-container {
     display: flex;
     justify-content: center;
-    width: 3rem;/* w-12 */
-    border: 3px solid black;/* border-[3px] */
+    width: 3rem;
+    border: 3px solid black;
     margin-top: auto;
 }
 
 .card-btn-container:hover {
     border: 2px solid black;
-    color: #f9fafb; /* text-gray-50 */
+    color: #f9fafb; 
 }
 
 /* BOTÓN BASE */
@@ -212,21 +199,21 @@ header {
 
 /* ESTADOS DEL BOTON SEGUN JS */
 .btn-liked {
-    background-color: #ef4444;/* bg-orange-500 */
+    background-color: #ef4444;
     color: white;
 }
 
 .btn-liked:hover {
-    background-color: #991b1b;; /* hover:bg-orange-700 */
+    background-color: #991b1b;
 }
 
 .btn-not-liked {
-    background-color: #bbf7d0;/* bg-green-200 */
+    background-color: #bbf7d0;
     color: black;
 }
 
 .btn-not-liked:hover {
-    background-color: #374151; /* hover:bg-gray-700 */
+    background-color: #374151; 
     color: white;
 }
 
@@ -335,7 +322,7 @@ border: none;
 @media screen and (max-width: 480px) {
 
         /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
-.header_item-container {
+    .header_item-container {
         flex-direction: column;
         align-items: center;
         padding: 0 4px;

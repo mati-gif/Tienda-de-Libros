@@ -39,7 +39,7 @@ function createDetailsCard(libroDetalle) {//este paraemtro es un objeto que cont
 
 	console.log(libroDetalle);
 	let card = `<div class="detail-card">
-    <img src ="${libroDetalle.image}" class="detail-img"  alt = ${libroDetalle.title}/>
+    <img src ="${libroDetalle.image}" class="detalle-img"  alt = ${libroDetalle.title}/>
     
 
 	<table class="detail-table">
@@ -54,7 +54,7 @@ function createDetailsCard(libroDetalle) {//este paraemtro es un objeto que cont
 		</tr>
 		<tr class="detail-row border-2 border-black">
 			<td class="detail-cell-left">Duración</td>
-			<td class="detail-cell">${libroDetalle.runtime}</td>
+			<td class="detail-cell">${libroDetalle.runtime} min</td>
 		</tr>
 		<tr class="detail-row border-2 border-black">
 			<td class="detail-cell-left">Estado</td>
@@ -76,7 +76,7 @@ function crearTabla(contenedorDetalle, libroDetalle) {
 	let tablas = `<div class="tabla-card">
   <h1 class="tabla-title">${libroDetalle.title}</h1>
   <h2 class="tabla-subtitle">${libroDetalle.tagline}</h2>
-  <h3 class="tabla-genres">${libroDetalle.genres}</h3>
+  <h3 class="tabla-genres">Genero: ${libroDetalle.genres}</h3>
   <p class="tabla-overview">${libroDetalle.overview}</p>
 
   <table class="tabla-detail">
