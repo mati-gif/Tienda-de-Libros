@@ -1,0 +1,391 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+
+}
+
+.header_item-container {
+
+    border: 3px solid #ada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav {
+    border: 1px solid #48e;
+    padding: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 91%;
+
+
+}
+
+.nav_item {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #47e;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav_item:hover {
+    background-color: #48e;
+    color: #fff;
+}
+
+.nav_link:hover {
+    background-color: #18233F;
+    color: #fff;
+}
+
+.header_img {
+    border: 5px solid #000;
+}
+
+.header_logo {
+    border: 5px solid #4f4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/*------------MAIN --------*/
+
+.main {
+    background-color: #e5e7eb;
+    flex: 1;
+
+}
+
+/**ESTILOS PARA LAS TARJETAS */
+
+.detail-card {
+    margin: auto;
+    /* m-auto */
+    margin-top: 1.25rem;
+    /* mt-5 */
+    margin-bottom: 2.5rem;
+    /* mb-10 */
+    display: flex;
+    flex-direction: column;
+    /* flex-col */
+    justify-content: space-evenly;
+    /* justify-evenly */
+    width: 24rem;
+    /* w-96 */
+    text-align: center;
+    /* text-center */
+}
+
+/* Imagen */
+.detail-img {
+    height: 16rem;
+    /* h-64 */
+    width: 24rem;
+    /* w-96 */
+    object-fit: contain;
+    /* object-cover */
+}
+
+/* Responsive sm: */
+@media (min-width: 640px) {
+    .detail-img {
+        width: 15rem;
+        /* w-60 */
+        height: 7rem;
+        /* h-28 */
+    }
+}
+
+.detail-table {
+    background-color: white;
+    /* bg-white */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-md */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Tabla */
+.detail-table {
+  background-color: white;   /* bg-white */
+  border-radius: 0.5rem;     /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+/* Filas */
+.detail-row {
+  border: 2px solid black;   /* border-2 border-black */
+}
+
+.detail-row-green {
+  background-color: #bbf7d0; /* bg-green-200 */
+}
+
+/* Celdas */
+.detail-cell-left {
+  padding: 0.5rem 1rem;      /* px-4 py-2 */
+  border: 2px solid black;
+  text-align: left;          /* text-left */
+  color: #374151;            /* text-gray-700 */
+  font-weight: 500;          /* font-medium */
+}
+
+.detail-cell {
+  padding: 0.5rem 1rem;      /* px-4 py-2 */
+  border: 2px solid black;
+  color: #4b5563;            /* text-gray-600 */
+}
+
+/*ESTILOS ARA LAS TABLAS */
+/* Contenedor */
+.tabla-card {
+  margin: auto;             /* m-auto */
+  margin-top: 1.25rem;      /* mt-5 */
+  margin-bottom: 2.5rem;    /* mb-10 */
+  border: 2px solid black;  /* border-black border-2 */
+  display: flex;
+  flex-direction: column;   /* flex-col */
+  width: 50%;               /* w-2/4 */
+}
+
+/* Títulos */
+.tabla-title {
+  font-weight: bold;        /* font-bold */
+  font-size: 1.875rem;      /* text-3xl */
+  margin: 1.25rem;          /* m-5 */
+}
+
+.tabla-subtitle {
+  font-weight: bold;        /* font-bold */
+  font-size: 1.25rem;       /* text-xl */
+  margin: 0.5rem;           /* m-2 */
+}
+
+.tabla-genres {
+  font-weight: bold;        /* font-bold */
+  font-size: 1.25rem;       /* text-xl */
+  margin: 0.5rem;           /* m-2 */
+}
+
+.tabla-overview {
+  font-weight: bold;        /* font-bold */
+  font-size: 1.25rem;       /* text-xl */
+}
+
+/* Tabla */
+.tabla-detail {
+  width: 24rem;             /* w-96 */
+  height: 10rem;            /* h-40 */
+  background-color: white;  /* bg-white */
+  margin: auto;             /* m-auto */
+  border: 2px solid #e5e7eb;/* border-gray-200 */
+  border-radius: 0.5rem;    /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  border-collapse: collapse;
+}
+
+/* Filas */
+.tabla-row {
+  border: 2px solid black;  /* border-2 border-black */
+}
+
+.tabla-row-green {
+  background-color: #bbf7d0; /* bg-green-200 */
+}
+
+/* Celdas */
+.tabla-cell-left {
+  padding: 0.5rem 1rem;      /* px-4 py-2 */
+  border: 2px solid black;   /* border-2 border-black */
+  text-align: left;          /* text-left */
+  color: #374151;            /* text-gray-700 */
+  font-weight: 500;          /* font-medium */
+}
+
+.tabla-cell {
+  padding: 0.5rem 1rem;      /* px-4 py-2 */
+  border: 2px solid black;
+  color: #4b5563;            /* text-gray-600 */
+}
+
+
+/*------------FOOTER SECTION--------*/
+
+
+/* FOOTER */
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: #18233f;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 1.1rem;
+    margin-top: 32px;
+}
+
+/*MEDIA QUERIES*/
+
+/* PC (>1200px) */
+@media screen and (min-width: 1200px) {
+    .detail-card {
+        max-width: 900px;
+        padding: 3em;
+    }
+    .detail-img {
+        width: 400px;
+    }
+    .detail-table {
+        font-size: 1.2rem;
+    }
+
+        .tabla-card {
+        max-width: 900px;
+        padding: 3em;
+    }
+    .tabla-title {
+        font-size: 2.5rem;
+    }
+    .tabla-detail {
+        font-size: 1.2rem;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .detail-card {
+        max-width: 700px;
+        padding: 2.5em;
+    }
+    .detail-img {
+        width: 340px;
+    }
+    .detail-table {
+        font-size: 1.1rem;
+    }
+        .tabla-card {
+        max-width: 700px;
+        padding: 2.5em;
+    }
+    .tabla-title {
+        font-size: 2rem;
+    }
+    .tabla-detail {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .detail-card {
+        max-width: 95vw;
+        padding: 1.2em;
+    }
+    .detail-img {
+        width: 220px;
+    }
+    .detail-table {
+        font-size: 1rem;
+    }
+    .detail-cell-left, .detail-cell {
+        padding: 0.5em 0.3em;
+    }
+        .tabla-card {
+        max-width: 95vw;
+        padding: 1.2em;
+    }
+    .tabla-title {
+        font-size: 1.5rem;
+    }
+    .tabla-detail {
+        font-size: 1rem;
+    }
+    .tabla-cell-left, .tabla-cell {
+        padding: 0.5em 0.3em;
+    }
+}
+
+
+/* Celular (<480px) */
+@media screen and (max-width: 480px) {
+    .detail-card {
+        max-width: 99vw;
+        padding: 0.5em;
+        margin: 0.5em auto;
+    }
+    .detail-img {
+        width: 98vw;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+    .detail-table {
+        font-size: 0.95rem;
+    }
+    .detail-cell-left, .detail-cell {
+        padding: 0.3em 0.1em;
+    }
+    .tabla-card {
+        max-width: 99vw;
+        padding: 0.5em;
+        margin: 0.5em auto;
+    }
+    .tabla-title {
+        font-size: 1.1rem;
+    }
+    .tabla-subtitle, .tabla-genres, .tabla-overview {
+        font-size: 0.95rem;
+    }
+    .tabla-detail {
+        font-size: 0.95rem;
+    }
+    .tabla-cell-left, .tabla-cell {
+        padding: 0.3em 0.1em;
+    }
+}
+

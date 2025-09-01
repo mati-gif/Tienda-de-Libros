@@ -250,7 +250,7 @@ button{
 @media screen and (min-width: 1200px) {
 
     /*MAIN -> FIELDSET 1*/
-    .main {
+    /* .main {
         width: 1000px;
         padding: 32px 0;
     }
@@ -280,7 +280,7 @@ button{
     .date-div input {
         max-width: 600px;
         width: 60%;
-    }
+    } */
 
     /*MAIN -> FIELDSET 2 y 3*/
 
@@ -296,7 +296,7 @@ button{
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 
     /*MAIN -> FIELDSET 1*/
-    .main {
+    /* .main {
         width: 900px;
         padding: 24px 0;
     }
@@ -325,7 +325,7 @@ button{
     .date-div input {
         max-width: 450px;
         width: 55%;
-    }
+    } */
     /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
     .footer {
         font-size: 1.15rem;
