@@ -2,7 +2,6 @@
 
 
 
-const API_KEY = 'AIzaSyBhIedadZZ7cFzBJq2ZTnCcW2-jWa40bzQ';
 
 let divCreado = document.getElementById("container_card");
 console.log(divCreado);
@@ -158,10 +157,10 @@ function toggleBoton(boton) {
 if (boton.classList.contains("btn-liked")) {
     boton.classList.remove("btn-liked");
     boton.classList.add("btn-not-liked");
-  } else {
+    } else {
     boton.classList.remove("btn-not-liked");
     boton.classList.add("btn-liked");
-  }
+    }
 
 }
 
@@ -429,7 +428,7 @@ function filtrarPeliculasPorGenero(select, array) {
 
 
 
-//------CREANDO EL EVENTO (  ===> INPUT <===  ) PARA QUE CUANDO ESCRIBA EL TITULO DE LA PELICULA APAREZCA LA PELI CON ESE NOMBRE.----//.
+//------CREANDO EL EVENTO (  ===> INPUT <===  ) PARA QUE CUANDO ESCRIBA EL TITULO DEL LIBRO APAREZCA EL LIBRO CON ESE NOMBRE.----//.
 //-----------------------
 
 

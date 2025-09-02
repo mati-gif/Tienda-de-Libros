@@ -1,7 +1,4 @@
 
-const API_KEY = '0ff70d54-dc0b-4262-9c3d-776cb0f34dbd';
-
-
 fetch('datos.json')
 	.then(response => {
 		if (!response.ok) {
@@ -13,7 +10,6 @@ fetch('datos.json')
 		let allBooks = data; // Asigna data a la variable global allBooks
 		let libroFiltrado = allBooks.find(item => item.id === movieId)
 		createDetailsCard(libroFiltrado);
-		// crearTabla()
 	})
 	.catch(error => {
 		console.warn(error); // Manejo de errores
@@ -25,7 +21,7 @@ fetch('datos.json')
 
 
 const urlParams = new URLSearchParams(window.location.search); //URLSearchParams es una interfaz que permite trabajar con los parámetros de búsqueda de una URL. windowsLocationSearch es la cadena de consulta de la url acytual, devuelve todo lo que sigue despues del "?".
-const movieId = urlParams.get('id');// con el met
+const movieId = urlParams.get('id');
 
 console.log(movieId);
 
@@ -34,7 +30,7 @@ console.log(movieId);
 
 
 
-function createDetailsCard(libroDetalle) {//este paraemtro es un objeto que contiene el detalle de las peliculas.
+function createDetailsCard(libroDetalle) {
 	let contenedorDetalle = document.getElementById("detail_container");
 
 	console.log(libroDetalle);
@@ -67,34 +63,34 @@ function createDetailsCard(libroDetalle) {//este paraemtro es un objeto que cont
 `
 
 	contenedorDetalle.innerHTML += card;
-	crearTabla(contenedorDetalle, libroDetalle)//le estamos pasando el contenedor y todos los datos de la pelicula
+	crearTabla(contenedorDetalle, libroDetalle);
 }
 
 function crearTabla(contenedorDetalle, libroDetalle) {
 
 
 	let tablas = `<div class="tabla-card">
-  <h1 class="tabla-title">${libroDetalle.title}</h1>
-  <h2 class="tabla-subtitle">${libroDetalle.tagline}</h2>
-  <h3 class="tabla-genres">Genero: ${libroDetalle.genres}</h3>
-  <p class="tabla-overview">${libroDetalle.overview}</p>
+<h1 class="tabla-title">${libroDetalle.title}</h1>
+<h2 class="tabla-subtitle">${libroDetalle.tagline}</h2>
+<h3 class="tabla-genres">Genero: ${libroDetalle.genres}</h3>
+<p class="tabla-overview">${libroDetalle.overview}</p>
 
-  <table class="tabla-detail">
+<table class="tabla-detail">
     <tbody>
-      <tr class="tabla-row tabla-row-green">
+    <tr class="tabla-row tabla-row-green">
         <td class="tabla-cell-left">Promedio de votos</td>
         <td class="tabla-cell">${libroDetalle.vote_average}</td>
-      </tr>
-      <tr class="tabla-row">
+    </tr>
+    <tr class="tabla-row">
         <td class="tabla-cell-left">Presupuesto</td>
         <td class="tabla-cell">${libroDetalle.budget}</td>
-      </tr>
-      <tr class="tabla-row">
+    </tr>
+    <tr class="tabla-row">
         <td class="tabla-cell-left">Ingresos</td>
         <td class="tabla-cell">${libroDetalle.revenue}</td>
-      </tr>
+    </tr>
     </tbody>
-  </table>
+</table>
 </div>
 
 

@@ -11,9 +11,9 @@
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
-      min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -105,7 +105,6 @@ header {
     flex-wrap: wrap;
     border-width: 2px;
     border-color: #4b5563;
-    background-color: #bfdbfe;
 }
 
 
@@ -121,15 +120,15 @@ header {
 /* CARD PRINCIPAL */
 .card {
     border: 2px solid black;
-    margin: 1.25rem;/* m-5 */
+    margin: 1.25rem;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* corregí el "beetwen" */
-    width: 20rem; /* w-80 */
+    justify-content: space-between; 
+    width: 20rem;
     text-align: center;
-    background-color: #ddd6fe; /* bg-violet-200 */
+    background-color: #ddd6fe; 
     border-radius: 8px;
 }
 
@@ -156,8 +155,8 @@ header {
 
 /* TAGLINE */
 .card-tagline {
-    padding: 0.5rem; /* p-2 */
-    font-size: 0.75rem;/* text-xs */
+    padding: 0.5rem; 
+    font-size: 0.75rem;
     font-weight: bolder;
     color: #1e40af; 
 
@@ -166,7 +165,7 @@ header {
 
 /* OVERVIEW */
 .card-overview {
-    padding: 0.75rem;/* p-3 */
+    padding: 0.75rem;
     font-size: 0.75rem;
     font-weight: bolder;
     color: #1e40af; 
@@ -182,6 +181,8 @@ header {
     width: 3rem;
     border: 3px solid black;
     margin-top: auto;
+    border-radius: 50%;
+
 }
 
 .card-btn-container:hover {
@@ -195,6 +196,8 @@ header {
     padding: 0.5rem 1rem; 
     border: none;
     cursor: pointer;
+    border-radius: 50%;
+
 }
 
 /* ESTADOS DEL BOTON SEGUN JS */
@@ -243,7 +246,6 @@ padding: 8px 16px;
 border-radius: 12px;
 background: #f3f0ff;
 font-size: 1.1rem;
-/* color: #6c3fc7; */
 width: 350px;
 border: none;
 }
