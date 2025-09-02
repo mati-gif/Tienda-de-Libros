@@ -10,10 +10,9 @@ console.log(divCreado);
 //esto sirve para manejar un array de favoritos en el localStorage.
 let arrayFavoritos;
 
-if (localStorage.getItem("favoritos")) { //verifica si existe un item con esta key en localStorage : osea si en el local storage hay una key con el nombre favoritos devolveme el valor de esa clave
+if (localStorage.getItem("favoritos")) { 
 
-    arrayFavoritos = JSON.parse(localStorage.getItem("favoritos")); //si existe un item con esa key guardame en arrayFavoritos el parseo de lo que esta en esa key.
-    //es decur si existe la key "favoritos" en el localStorage se obtiene su valor (que es un string json) y luego se convierte otra vez en un array usando JSON.parse y se guarda en arrayFavoritos.
+    arrayFavoritos = JSON.parse(localStorage.getItem("favoritos")); 
 } else {
 
     arrayFavoritos = []; // si no guardame en arrayFavoritos un array vacio.
@@ -30,7 +29,7 @@ console.log(arrayFavoritos);
 
 function createCards(libros) {
 
-    let estaLikeado = isLiked(libros.id);// estoy llamando a la funcion isLiked y le paso como argumento el id de la pelicula que despues lo uso para determinar si esta marcado el boton o no.
+    let estaLikeado = isLiked(libros.id);// estoy llamando a la funcion isLiked y le paso como argumento el id del libro que despues lo uso para determinar si esta marcado el boton o no.
     return `
     <div class="card">
     <a href="./detail.html?id=${libros.id}">
@@ -49,42 +48,26 @@ function createCards(libros) {
     </div>
 `;
 
-    //data-vote="true" ====> se usa para guardar un valor relacionada con el boton de like,osea despues muestro lo que aparece en consola cuando apreto el boton.
-    //data-id="${peliculas.id}" =====> se usa para guardar el id de la pelicula que corresponde a la pelicula.
-    //son atributos de datos personalizados en html y permiten almacenar información adicional en los elementos HTML sin necesidad de usar clases o id. 
-
-
-    //dentro del ternario digo: si estaLikeado = "true" (si el id seleccionado se encuentra dentro del arrayFavoritos)
-
 }
 
 
-
-
-
-
-//toma una rray de objetos de peliclas llamado arraPeliculas (que es el parametro de la fucnion) y genera tarjetas html
+//toma una array de objetos de libros llamado arrayLibros y genera tarjetas html
 function addCards(arrayLibros) {
-    // let divCreado = document.getElementById("container_card");
 
     divCreado.innerHTML = '';
     let respuesta = "";
     console.log(arrayLibros);
-    arrayLibros.forEach(item => {// Se utiliza forEach para iterar sobre cada objeto de libro en arrayLibros
-        respuesta += createCards(item); //el html generado por createCards se concatena a la variable respuesta.
+    arrayLibros.forEach(item => {
+        respuesta += createCards(item); 
     });
     divCreado.innerHTML += respuesta;
 }
 
 
+let allBooks;
 
 
-
-
-let allMovies;
-
-
-fetch('datos.json') // 👈 pedimos el archivo local
+fetch('datos.json') 
     .then(response => {
         if (!response.ok) {
             throw new Error("Error al cargar datos.json: " + response.status);
@@ -92,13 +75,13 @@ fetch('datos.json') // 👈 pedimos el archivo local
         return response.json();
     })
     .then(data => {
-        allMovies = data; // data ya es el array de películas
+        allBooks = data; 
 
-        armarSelect(allMovies);
-        addCards(allMovies);
-        divCreado.addEventListener("click", (evento) => verifyButtonAndFavorite(evento, allMovies));
+        armarSelect(allBooks);
+        addCards(allBooks);
+        divCreado.addEventListener("click", (evento) => verifyButtonAndFavorite(evento, allBooks));
 
-        console.log(allMovies);
+        console.log(allBooks);
     })
     .catch(error => {
         console.warn("Error al leer datos.json:", error);
@@ -106,46 +89,20 @@ fetch('datos.json') // 👈 pedimos el archivo local
     });
 
 
-
-//EJEMPLO DE COMO SE USA GETITEM
-// let peliculasEnFavoritos = localStorage.getItem("favoritos")
-// console.log(JSON.parse(peliculasEnFavoritos));
-
-
-//  maneja eventos de click en botones dentro de las tarjetas de películas.
-//y  actualizar el estado de favorito de la película correspondiente.
+//  maneja eventos de click en botones dentro de las tarjetas de libros.
+//y  actualizar el estado de favorito de la libro correspondiente.
 function verifyButtonAndFavorite(evento, data) {
 
-    let esBotonLike = evento.target.dataset.vote; //accede al atributo data-vote
-    let idBooks = evento.target.dataset.id; //accede al atributos data-id
-    // evento.target.classList.add("bg-orange-500");
+    let esBotonLike = evento.target.dataset.vote; 
+    let idBooks = evento.target.dataset.id; 
     console.log(esBotonLike);
     console.log(idBooks);
 
-    if (esBotonLike) { //si esBotonLike es verdadero 
-        toggleFavorites(idBooks)//llama a la funcion toggleFavorites que recibe como argumento el idBooks
-        //que cambia el estado de favorito de la pelicula con el id dado.Es decir si la pelicula esta marcada como favorita
-        //la funcion la desmarca (es decir la elimina de la lista de favoritos)y si no esta marcada la va a marcar como favorita.
-
-
-
+    if (esBotonLike) { 
+        toggleFavorites(idBooks)
         let boton = evento.target;
         console.log(boton);
-        toggleBoton(boton) //llama a la funcion toggleBoton pasadno el boton como argumetno y cambia el backGround del mismo.
-
-        // let movie = data.find(item => item.id === idPeliculas)
-        // let card = createCards(movie);
-
-        // let cardAnterior = evento.target.parentElement;
-        // let cardNueva = document.createElement("div");
-
-        // cardNueva.innerHTML = card
-
-
-        // divCreado.replaceWith(card)
-        // addCards(data);
-
-
+        toggleBoton(boton) 
 
     }
 
@@ -154,12 +111,12 @@ function verifyButtonAndFavorite(evento, data) {
 
 function toggleBoton(boton) {
 
-if (boton.classList.contains("btn-liked")) {
-    boton.classList.remove("btn-liked");
-    boton.classList.add("btn-not-liked");
+    if (boton.classList.contains("btn-liked")) {
+        boton.classList.remove("btn-liked");
+        boton.classList.add("btn-not-liked");
     } else {
-    boton.classList.remove("btn-not-liked");
-    boton.classList.add("btn-liked");
+        boton.classList.remove("btn-not-liked");
+        boton.classList.add("btn-liked");
     }
 
 }
@@ -168,43 +125,32 @@ if (boton.classList.contains("btn-liked")) {
 //verifica si un id especifico esta presente dentro de arrayFavoritos
 function isLiked(id) {
 
-    return arrayFavoritos.includes(id);//Retorna true si el id seleccionado está dentro del array arrayFavoritos, indicando que el id está marcado como favorito. sino retorna false
+    return arrayFavoritos.includes(id);
 }
 
 
 
-//sirve para alternar el estado de favorito de  una pelicula en la lista de favoritos almacenada en localStorage
-//osea esta función permite a los usuarios marcar o desmarcar películas como favoritas, actualizando el localStorage.
-//es decir añade o elimina el id de la pelicula del array arrayfavorites .
+
+// esta función permite a los usuarios marcar o desmarcar películas como favoritas, actualizando el localStorage.
 function toggleFavorites(idBooks) {
 
-    if (arrayFavoritos.includes(idBooks)) { //si ya esta incluido el like que le di, entonces sacamelo
+    if (arrayFavoritos.includes(idBooks)) { 
 
-        arrayFavoritos.splice(arrayFavoritos.indexOf(idBooks), 1) //arrayFavoritos.indexOf(idBooks) devuelve el índice donde idBooks se encuentra en el array
+        arrayFavoritos.splice(arrayFavoritos.indexOf(idBooks), 1) 
         console.log(arrayFavoritos);
-    } else {// si no esta inlcuido el like que le di entonces agregamelo.
+    } else {
 
         arrayFavoritos.push(idBooks);
 
     }
 
-    localStorage.setItem("favoritos", JSON.stringify(arrayFavoritos)) //se actualiza el localStorage con con el nuevo contenido de arrayFavoritos y  JSON.stringify(arrayFavoritos) convierte arrayFavoritos a una string JSON antes de almacenarlo en el localStorage.
+    localStorage.setItem("favoritos", JSON.stringify(arrayFavoritos)) 
 }
 
 
 
-
-
-
-
-//forma2: crear una funcion que recibe un parametro (el array de peliculas) que adentro tenga un forEach() que tambien va a recorrer el array de peliculas y va a devolver la tarjeta solo con las propiedadess que le estoy pasando en el foreach .
-
-
-
-// addCards(data);
 console.log(divCreado);
 
-// divCreado.classList.add("flex", "justify-center", "flex-wrap")
 divCreado.style.display = "flex";
 divCreado.style.justifyContent = "center";
 divCreado.style.flexWrap = "wrap";
@@ -218,13 +164,11 @@ let containerDiv = document.querySelector(".container_div");
 let label = document.getElementById("label");
 
 
-// containerDiv.classList.add("flex", "justify-center");
 containerDiv.style.display = "flex";
 containerDiv.style.justifyContent = "center";
 containerDiv.style.padding = "10px";
 
 
-// containerDiv.innerHTML = "<label> Filtrar:</label>"
 
 if (containerDiv && label) {
 
@@ -241,9 +185,6 @@ if (containerDiv && label) {
     inputText.value = "";
     inputText.placeholder = "Buscar un libro";
     inputText.classList.add("search-input");
-    // inputText.classList.add("ml-20");
-    // inputText.style.marginLeft = "5rem";
-    // inputText.style.padding = "5px";
     label.appendChild(inputText);
 
     console.log(containerDiv);
@@ -254,10 +195,10 @@ if (containerDiv && label) {
 
 
 
-function armarSelect(arrayLibros) {//arrayLibros seria data.books pero como no puedo poner data.books como parametro le pongo un nombre que lo represente que seria arrayLibros
+function armarSelect(arrayLibros) {
 
 
-    let capturarGeneros = arrayLibros.map((genero) => { // devuelve un array que adentro tiene arrays con los generos de cada libro.
+    let capturarGeneros = arrayLibros.map((genero) => { 
         let generosCapturados = genero.genres
         return generosCapturados
     });
@@ -267,17 +208,15 @@ function armarSelect(arrayLibros) {//arrayLibros seria data.books pero como no p
 
     capturarGeneros.forEach(item => {
 
-        allGenres = allGenres.concat(item); // es concatenar todo en un solo array. 
+        allGenres = allGenres.concat(item); 
     })
 
     console.log(allGenres);
 
-
     let eliminarDuplicados = [];
 
-    allGenres.forEach(genre => { //si en el array vacio no tengo el genero , lo mete . si eliminar duplicados no inlcuye le genero , le pusheo el genero. Si ya lo incluye no se lo pusheo porque ya lo tiene lo que hace que obtenga un array sin duplicar elementos.
+    allGenres.forEach(genre => { 
         if (!eliminarDuplicados.includes(genre)) {
-
 
             eliminarDuplicados.push(genre)
         }
@@ -291,41 +230,23 @@ function armarSelect(arrayLibros) {//arrayLibros seria data.books pero como no p
 }
 
 
-
-
-// let capturarGeneros = data.flatMap(genero => genero.genres); // el metodo map devuelve un nuevo array grande de generos que adentro tiene  arrays que muestra los generos por cada pelicula. Y lo que hace el flat es unir todo en un solo array grande quitandole el corchete a los array pequeños.
-
-// console.log(capturarGeneros);
-// let eliminarDuplicados = [...new Set(capturarGeneros)];// lo que hace etsa funcion es que no permite elementos duplicados , me trae un nuevo array con los generos que no se repiten. El newSet crea un conjunto de valores a partir del array capturarGeneros.
-// console.log(eliminarDuplicados);
-// // los tres puntos descompone del array capturarGeneros todos los generos y con el newSet trae un objeto y  le saca los duplicados .
-
-
-// console.log(new Set (capturarGeneros.flat())); //el metodo flat() une todos los arrays en uno solo, mientras que el metodo newSet no perimite elementos repeidos dentro de un array.
-
-
-
-
-//forma 2:
-
 function createOptions(genero) {
     let select = document.querySelector(".select");
 
-    select.innerHTML = ''; //elimina todas las opciones existentes antes de agregar las nuevas, asegurando que no haya opciones duplicadas ni acumulación innecesaria de opciones.
+    select.innerHTML = ''; 
     select.classList.add("option-inicial");
-    
+
     let optionInicial = document.createElement('option');
     optionInicial.textContent = "elige el genero";
     optionInicial.value = "genero";
     console.log(optionInicial);
-    
+
     select.appendChild(optionInicial);
 
 
     genero.forEach((genre) => {
 
         let option = document.createElement('option');
-        // option.innerHTML = "elige el genero";
         option.value = genre;
         option.innerHTML = genre;
         select.appendChild(option);
@@ -333,48 +254,23 @@ function createOptions(genero) {
 }
 
 
-
-
-
-
-
-
-
-
-
 //--CREANDO LA CALLBACK DEL SELECT =====> OPTION <====== //
 
-//esta funcion se ejecuta cuando se seleciiona un genero en el select. Se ejecuta en respuesta a un evento y utiliza la funcion filtrarPeliculasPorGenero para filtrar las peliculas por el genero seleccionado.
+//esta funcion se ejecuta cuando se seleciiona un genero en el select. Se ejecuta en respuesta a un evento y utiliza la funcion filtrarLibrosPorGenero para filtrar las peliculas por el genero seleccionado.
 let callBackEventSelect = (evento) => {
 
-    // let select = evento.target.value; // obtiene el valor del genero seleccionado.
-    console.log(allMovies);
-    let arrayFiltrado = allMovies; // inicializa el array filtrado con todos los datos de las peliculas.
-    let arrayFiltradoPorGenero = filtrarPeliculasPorGenero(selectOpciones.value, arrayFiltrado); //filtra las peliculas por el genero seleccionado.
-    let arrayFiltradoPorNombre = filtrarPeliculasPorNombre(buscarPelis.value.toLowerCase(), arrayFiltradoPorGenero);  // Filtra las películas filtradas por género según el nombre de la película 
+    console.log(allBooks);
+    let arrayFiltrado = allBooks; // inicializa el array filtrado con todos los datos de los libros.
+    let arrayFiltradoPorGenero = filtrarLibrosPorGenero(selectOpciones.value, arrayFiltrado); //filtra los libros por el genero seleccionado.
+    let arrayFiltradoPorNombre = filtrarLibrosPorNombre(buscarLibros.value.toLowerCase(), arrayFiltradoPorGenero);  // Filtra las películas filtradas por género según el nombre de la película 
     addCards(arrayFiltradoPorNombre);
-    mostrarMensajeSiNoHayPeliculas(arrayFiltradoPorNombre);
+    mostrarMensajeSiNoHayLibros(arrayFiltradoPorNombre);
 
 }
 
 
 
-//--CREANDO LA CALLBACK DEL INPUT =====> EL USUARIO INGRESA EL NOMBRE DE LA PELI <====== //
-
-
-
-// La función callBackEventInput se ejecuta cuando se escribe algo en el input.(    no prestarle atencion a etsa funcion, uni esta funcion con la de arriba y el filtrocruzado se hace igual)
-// let callBackEventInput = (evento) =>{
-//     // let input = evento.target.value.toLowerCase();// Obtiene el valor del input y lo convierte a minúsculas
-//     // console.log(input);
-//     let arrayFiltrado = data; // inicializa el array filtrado con todos los datos de las peliculas.
-//     let arrayFiltradoPorNombre = filtrarPeliculasPorNombre(inputText.value.toLowerCase(),arrayFiltrado);// Filtra las películas por el nombre ingresado
-//     let arrayFiltradoPorGenero = filtrarPeliculasPorGenero(selectOpciones.value,arrayFiltradoPorNombre); // Filtra las películas filtradas por nombre según el género seleccionado
-//     addCards(arrayFiltradoPorGenero);
-//     mostrarMensajeSiNoHayPeliculas(arrayFiltradoPorGenero);
-//     // filtrarPeliculasPorNombre(input);
-
-// }
+//--CREANDO LA CALLBACK DEL INPUT =====> EL USUARIO INGRESA EL NOMBRE DEL LIBRO <====== //
 
 let selectOpciones = document.querySelector(".select");
 
@@ -382,50 +278,28 @@ let selectOpciones = document.querySelector(".select");
 selectOpciones.addEventListener("input", callBackEventSelect);
 
 
-
-let buscarPelis = document.getElementById("input-text");
-
-
-buscarPelis.addEventListener("input", callBackEventSelect);
+let buscarLibros = document.getElementById("input-text");
 
 
+buscarLibros.addEventListener("input", callBackEventSelect);
 
 
-
-
-
-
-
-
-
-
-
-
-//------CREANDO EL EVENTO ( SELECT =>  OPTIONS ) PARA QUE CUANDO SE HAGA CLICK EN UN GENERO APAREZCAN LAS PELICULAS QUE TIENEN ESE GENERO ----//.
+//------CREANDO EL EVENTO ( SELECT =>  OPTIONS ) PARA QUE CUANDO SE HAGA CLICK EN UN GENERO APAREZCAN LOS LIBROS QUE TIENEN ESE GENERO ----//.
 
 //esta funcion lp que hacw es  filtrar un array  de películas según el género seleccionado y devuelve las películas que coinciden con ese género.
-function filtrarPeliculasPorGenero(select, array) {
+function filtrarLibrosPorGenero(select, array) {
 
-    //si el valor del select es genero , indica que no se ha seleccionado ningun genero en especifico y la funcion devuelve el array de peliculas 
-    if (select === "genero") {                //  || select === "" (no prestarle atencion)
+    if (select === "genero") {          
         return array;
     }
+    let filterBooks = array.filter((book) => {
 
-
-    let filterMovies = array.filter((movie) => {
-
-        return movie.genres.includes(select)
+        return book.genres.includes(select)
 
     });
 
-
-    return filterMovies;
+    return filterBooks;
 }
-
-
-
-
-
 
 
 //------CREANDO EL EVENTO (  ===> INPUT <===  ) PARA QUE CUANDO ESCRIBA EL TITULO DEL LIBRO APAREZCA EL LIBRO CON ESE NOMBRE.----//.
@@ -433,48 +307,37 @@ function filtrarPeliculasPorGenero(select, array) {
 
 
 // esta funcion  filtra un array de peliculas según un nombre que se ingreso. Si no se infresa ningún nombre , devuelve la lista completa de películas. Si se ingresa un nombre, devuelve una lista de películas cuyos títulos contienen el nombre buscado.
-function filtrarPeliculasPorNombre(nombre, array) {
+function filtrarLibrosPorNombre(nombre, array) {
 
-
-
-    if (nombre === "") { // si nombre es un string vacio (lo que significa que no se ingresó un nombre para buscar), la función devuelve una array de peliculas..
+    if (nombre === "") { 
         return array;
     }
+
     let filterSearch = array.filter((movie) => {
         return movie.title.toLowerCase().includes(nombre)
     });
     console.log(filterSearch);
 
-
-
-
-
-
     return filterSearch;
-
 }
 
 
-function mostrarMensajeSiNoHayPeliculas(movies) {
-    let movieContainer = document.getElementById("container_card");
+function mostrarMensajeSiNoHayLibros(books) {
+    let bookContainer = document.getElementById("container_card");
     let mensajeExistente = document.getElementById("mensaje_no_encontrado");
     console.log(mensajeExistente);
     if (mensajeExistente) {
         mensajeExistente.remove();
     }
 
-    if (movies.length === 0) {
+    if (books.length === 0) {
         let parrafo = document.createElement("p");
         console.log(parrafo);
         parrafo.id = "mensaje_no_encontrado";
         parrafo.textContent = "libro no encontrado";
-        movieContainer.appendChild(parrafo);
+        bookContainer.appendChild(parrafo);
     }
 }
-
-
-
-
 
 // export default { createCards,addCards}
 

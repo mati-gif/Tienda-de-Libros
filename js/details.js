@@ -7,13 +7,13 @@ fetch('datos.json')
 		return response.json();
 	})
 	.then(data => {
-		let allBooks = data; // Asigna data a la variable global allBooks
+		let allBooks = data; 
 		let libroFiltrado = allBooks.find(item => item.id === movieId)
 		createDetailsCard(libroFiltrado);
 	})
 	.catch(error => {
-		console.warn(error); // Manejo de errores
-		return []; // Retorna un array vacío en caso de error
+		console.warn(error);
+		return []; 
 	});
 
 
