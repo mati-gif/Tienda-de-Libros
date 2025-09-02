@@ -8,7 +8,7 @@ fetch('datos.json')
 	})
 	.then(data => {
 		let allBooks = data; 
-		let libroFiltrado = allBooks.find(item => item.id === movieId)
+		let libroFiltrado = allBooks.find(item => item.id === bookId)
 		createDetailsCard(libroFiltrado);
 	})
 	.catch(error => {
@@ -21,9 +21,9 @@ fetch('datos.json')
 
 
 const urlParams = new URLSearchParams(window.location.search); //URLSearchParams es una interfaz que permite trabajar con los parámetros de búsqueda de una URL. windowsLocationSearch es la cadena de consulta de la url acytual, devuelve todo lo que sigue despues del "?".
-const movieId = urlParams.get('id');
+const bookId = urlParams.get('id');
 
-console.log(movieId);
+console.log(bookId);
 
 
 

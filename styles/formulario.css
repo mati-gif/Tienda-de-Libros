@@ -200,7 +200,7 @@ legend{
 
 .fieldset3{
 
-
+    border: 3px solid #fa3;
     padding: 20px;
 }
 
@@ -209,7 +209,10 @@ legend{
 }
 .fieldset3 label{
     margin: 5px;
+    border: 3px dashed #4f4;
 }
+
+
 
 input{
     padding: 2px;
@@ -230,9 +233,6 @@ select{
 
 }
 
-/* option{
-    background-color: #aaa;
-} */
 
 button{
     width: 100%;
