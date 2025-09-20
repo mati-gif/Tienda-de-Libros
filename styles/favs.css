@@ -15,14 +15,14 @@ body {
 }
 
 header {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin-bottom: 10px;
 
 }
 
 .header_item-container {
 
-    border: 3px solid #ada;
+    /* border: 3px solid #ada; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ header {
 }
 
 .nav {
-    border: 1px solid #48e;
+    /* border: 1px solid #48e; */
     padding: 8px;
     margin: auto;
     display: flex;
@@ -81,7 +81,7 @@ header {
 }
 
 .header_logo {
-    border: 5px solid #4f4;
+    /* border: 5px solid #4f4; */
     width: 100px;
     height: 100px;
     border-radius: 50%;
