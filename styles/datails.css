@@ -1,0 +1,466 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+
+}
+
+.header_item-container {
+
+    border: 3px solid #ada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav {
+    border: 1px solid #48e;
+    padding: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 91%;
+
+
+}
+
+.nav_item {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #47e;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 1px solid #487;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav_item:hover {
+    background-color: #48e;
+    color: #fff;
+}
+
+.nav_link:hover {
+    background-color: #18233F;
+    color: #fff;
+}
+
+.header_img {
+    border: 5px solid #000;
+}
+
+.header_logo {
+    border: 5px solid #4f4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/*------------MAIN --------*/
+
+.main {
+    background-color: #e5e7eb;
+    flex: 1;
+
+}
+
+#detail_container {
+width: 98vw;               
+display: flex;   
+flex-direction: column;           
+justify-content: center;    
+border: 2px solid #4b5563;  
+background-color: #e5e7eb;  
+}
+
+
+/**ESTILOS PARA LAS TARJETAS */
+
+.detail-card {
+    background: #f8f5ff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(108,63,199,0.07);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 700px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #4f4;
+}
+
+/* Imagen */
+.detalle-img {
+    height: 14rem;
+    width: 100%;
+    object-fit: contain;
+    border: 3px solid #f4f;
+
+}
+
+/* Responsive sm: */
+@media (min-width: 640px) {
+    .detail-img {
+        width: 15rem;
+        height: 7rem;
+    }
+}
+
+.detail-table {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: 3px solid #48e;
+
+}
+
+/* Tabla */
+.detail-table {
+    background-color: white;   
+    border-radius: 0.5rem;     
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: 5px dashed #ea2;
+
+}
+
+/* Filas */
+.detail-row {
+    border: 2px solid black;   
+}
+
+.detail-row-green {
+    background-color: #bbf7d0; 
+}
+
+/* Celdas */
+.detail-cell-left {
+    padding: 0.5rem 1rem;      
+    border: 2px solid black;
+    text-align: left;          
+    color: #374151;           
+    font-weight: 500;          
+}
+
+.detail-cell {
+    padding: 0.5rem 1rem;      
+    border: 2px solid black;
+    color: #4b5563;            
+}
+
+/*ESTILOS PARA LAS TABLAS */
+/* Contenedor */
+.tabla-card {
+margin: auto;            
+margin-top: 1.25rem;      
+margin-bottom: 2.5rem;    
+border: 2px solid black;  
+display: flex;
+flex-direction: column;   
+width: 55rem; 
+gap: 20px;
+}
+
+/* Títulos */
+.tabla-title {
+font-weight: bold;        
+font-size: 1.875rem;      
+    margin: 1.25rem;  
+    border: 3px solid #ea7;
+    text-align: center;
+}
+
+.tabla-subtitle {
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    margin: 0.5rem;   
+    border: 3px dotted #f67;
+    text-align: center;
+
+}
+
+.tabla-genres {
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    margin: 0.5rem;  
+    border: 3px dotted #87f;
+    text-align: center;
+
+
+}
+
+.tabla-overview {
+    font-weight: bold;        
+    font-size: 1.25rem;       
+    border: 3px dotted #87f;
+    text-align: center;
+
+}
+
+/* Tabla */
+.tabla-detail {
+    width: 100%;             
+    height: 10rem;            
+    background-color: white;  
+    margin: auto;             
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-collapse: collapse;
+}
+
+/* Filas */
+.tabla-row {
+    border: 2px solid black;  
+}
+
+.tabla-row-green {
+    background-color: #bbf7d0; 
+}
+
+/* Celdas */
+.tabla-cell-left {
+    padding: 0.5rem 1rem;      
+    border: 2px solid black;   
+    text-align: left;         
+    color: #374151;            
+    font-weight: 500;          
+}
+
+.tabla-cell {
+    padding: 0.5rem 1rem;      
+    border: 2px solid black;
+    color: #4b5563;            
+}
+
+
+/*------------FOOTER SECTION--------*/
+
+
+/* FOOTER */
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: #18233f;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 1.1rem;
+    margin-top: 32px;
+}
+
+/*MEDIA QUERIES*/
+
+/* PC (>1200px) */
+@media screen and (min-width: 1200px) {
+    .detail-card {
+        max-width: 900px;
+        padding: 3em;
+    }
+    .detalle-img {
+        width: 400px;
+    }
+    .detail-table {
+        font-size: 1.2rem;
+    }
+
+        .tabla-card {
+        max-width: 900px;
+        padding: 3em;
+    }
+    .tabla-title {
+        font-size: 2.5rem;
+    }
+    .tabla-detail {
+        font-size: 1.2rem;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .detail-card {
+        max-width: 700px;
+        padding: 2.5em;
+    }
+    .detalle-img {
+        width: 340px;
+    }
+    .detail-table {
+        font-size: 1.1rem;
+    }
+        .tabla-card {
+        max-width: 700px;
+        padding: 2.5em;
+    }
+    .tabla-title {
+        font-size: 2rem;
+    }
+    .tabla-detail {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .detail-card {
+        max-width: 98vw;
+        padding: 1.2em;
+    }
+    .detalle-img {
+        width: 220px;
+    }
+    .detail-table {
+        font-size: 1rem;
+    }
+    .detail-cell-left, .detail-cell {
+        padding: 0.5em 0.3em;
+    }
+        .tabla-card {
+        max-width: 95vw;
+        padding: 1.2em;
+    }
+    .tabla-title {
+        font-size: 1.5rem;
+    }
+    .tabla-detail {
+        font-size: 1rem;
+    }
+    .tabla-cell-left, .tabla-cell {
+        padding: 0.5em 0.3em;
+    }
+}
+
+
+/* Celular (<480px) */
+@media screen and (max-width: 480px) {
+
+    /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
+    .header_item-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+        gap: 6px;
+    }
+    .header_logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 4px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 0.95rem;
+        gap: 4px;
+        padding: 4px 0;
+    }
+    .nav_item, .nav_link {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 2px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    /*MAIN*/
+        .detail-card {
+        max-width: 99vw;
+        padding: 0.5em;
+        margin: 0.5em auto;
+    }
+    .detalle-img {
+        width: 98vw;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+    .detail-table {
+        font-size: 0.95rem;
+        border-radius: 4px;
+    }
+    .detail-cell-left, .detail-cell {
+        padding: 0.3em 0.1em;
+        font-size: 0.95rem;
+    }
+
+    .detail-row, .detail-row-green {
+        display: block;
+        width: 100%;
+    }
+    .detail-table tr {
+        display: block;
+        width: 100%;
+    }
+    .detail-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .tabla-card {
+        max-width: 99vw;
+        padding: 0.5em;
+        margin: 0.5em auto;
+    }
+    .tabla-title {
+        font-size: 1.1rem;
+    }
+    .tabla-subtitle, .tabla-genres, .tabla-overview {
+        font-size: 0.95rem;
+    }
+    .tabla-detail {
+        font-size: 0.95rem;
+    }
+    .tabla-cell-left, .tabla-cell {
+        padding: 0.3em 0.1em;
+    }
+
+        /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 0.95rem;
+        padding: 14px 0;
+        margin-top: 16px;
+    }
+    .footer h3 {
+        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 1.3;
+    }
+}
+

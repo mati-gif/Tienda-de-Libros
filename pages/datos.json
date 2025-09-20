@@ -48,7 +48,7 @@
         "genres": [
             "Adventure",
             "Action",
-            "Drama"
+            "Science Fiction"
         ],
         "original_language": "en",
         "overview": "La historia centra en Frodo Bolsón, un hobbit que hereda un objeto de inmenso poder y corrupción: el Anillo Único, forjado por el Señor Oscuro Sauron para dominar la Tierra Media. Frodo emprende una peligrosa misión para destruir el Anillo en el Monte del Destino, el lugar donde fue forjado, para así derrotar a Sauron y salvar al mundo de la oscuridad. ",
@@ -136,8 +136,7 @@
             "Animation",
             "Comedy",
             "Family",
-            "Fantasy",
-            "Romance"
+            "Fantasy"
         ],
         "original_language": "en",
         "overview": "Es la historia de Dorothy, una niña de Kansas que es transportada a la tierra mágica de Oz por un ciclón junto a su perro Toto. Para regresar a casa, debe seguir el camino de las baldosas amarillas hacia la Ciudad Esmeralda y encontrar al Mago de Oz.",
@@ -224,7 +223,8 @@
         "genres": [
             "Action",
             "Thriller",
-            "Crime"
+            "Crime",
+            "Mystery"
         ],
         "original_language": "en",
         "overview": "El detective Hércules Poirot debe resolver el asesinato de Samuel Ratchett, un millonario, a bordo del Orient Express, detenido por una tormenta de nieve, y se ve envuelto en una trama en la que todos los pasajeros parecen tener motivos y estar implicados en la muerte del hombre, quien estaba relacionado con el secuestro y asesinato de una niña en Estados Unidos. ",
@@ -248,7 +248,9 @@
             "Family",
             "Adventure",
             "Fantasy",
-            "Comedy"
+            "Comedy",
+            "Science Fiction"
+
         ],
         "original_language": "en",
         "overview": "El tercer año de estudios de Harry en Hogwarts se ve amenazado por la fuga de Sirius Black de la prisión de Azkaban. Al parecer, se trata de un peligroso mago que fue cómplice de Lord Voldemort y que intentará vengarse de Harry Potter.",
@@ -270,7 +272,10 @@
         "genres": [
             "Animation",
             "Comedy",
-            "Action"
+            "Action",
+            "Fantasy",
+            "Family",
+            "Science Fiction"
         ],
         "original_language": "en",
         "overview": "Durante su primer año en la escuela de magia y hechicería de Hogwarts, Harry Potter descubre que un malévolo y poderoso mago llamado Voldemort está en busca de una piedra filosofal que alarga la vida de quien la posee.",
@@ -291,7 +296,8 @@
         "image": "https://images.cdn1.buscalibre.com/fit-in/360x360/4b/82/4b82a25092b88a61f9da27e27698493e.jpg",
         "genres": [
             "Drama",
-            "History"
+            "History",
+            "Romance"
         ],
         "original_language": "en",
         "overview": "narra la trágica historia de dos jóvenes de familias rivales en Verona, los Montesco y los Capuleto, que se enamoran profundamente y se casan en secreto.",
@@ -313,8 +319,7 @@
         "genres": [
             "Adventure",
             "Family",
-            "Fantasy",
-            "Romance"
+            "Fantasy"
         ],
         "original_language": "en",
         "overview": "narra la historia de Vasya, una joven que, a diferencia de los demás, puede ver y hablar con los espíritus de la naturaleza. Mientras su comunidad vive bajo el temor a los espíritus del invierno, la llegada de una madrastra devota al cristianismo y un sacerdote que prohíbe las antiguas ofrendas a estas criaturas desencadenará una lucha épica",
@@ -393,7 +398,70 @@
         "revenue": 1921847111,
         "runtime": 148,
         "status": "Released",
-        "tagline": "Es como pasear en el bosque pero hace millones de años atras",
+        "tagline": "Es como pasear por el bosque pero hace millones de años atras",
+        "budget": 200000000
+    },
+    {
+        "id": "653035c2c61a4a32bd2724d2854",
+        "image": "https://concentra.com.ar/wp-content/uploads/por-que-se-llama-3-metros-sobre-el-cielo.webp",
+        "genres": [
+            "Romance",
+            "Drama"
+        ],
+        "original_language": "en",
+        "overview": "En Barcelona, dos jóvenes que pertenecen a mundos opuestos se conocen. Él, es un joven apuesto y problemático con tendencias violentas llamado Hugo ('H'), y ella, es una niña de bien llamada Babi. Hugo y Babi vivirán una relación intensa con la que aprenderán lo que significa el primer amor.",
+        "popularity": 206.955,
+        "release_date": "12/15/2021",
+        "title": "A tres metros sobre el cielo",
+        "vote_average": 7.989,
+        "vote_count": 18330,
+        "homepage": "",
+        "revenue": 1921847111,
+        "runtime": 148,
+        "status": "Released",
+        "tagline": "Ya nunca tendrás la sensación de estar a 3m. sobre el cielo",
+        "budget": 200000000
+    },
+    {
+        "id": "653035c2c61a4a32bd2724d244",
+        "image": "https://pdlibrosarg.cdnstatics2.com/usuaris/libros/thumbs/7b1e3dde-ae7a-46bd-a3d7-05e1e0d32887/d_360_620/portada_el-verano-en-que-me-enamore_jenny-han_202206071750.webp",
+        "genres": [
+            "Romance",
+            "Drama"
+        ],
+        "original_language": "en",
+        "overview": "Narra la historia de Belly, una adolescente que pasa sus veranos en la casa de la playa junto a su familia y la de la mejor amiga de su madre, los Fisher. Belly siempre ha estado enamorada de Conrad y Jeremiah Fisher, pero este verano, al cumplir 16 años, siente que todo cambiará, volviéndose más madura y experimentando su primer amor, sin saber que también será el verano en que las vidas de todos a su alrededor se transformarán para siempre.",
+        "popularity": 206.955,
+        "release_date": "12/15/2021",
+        "title": "El verano en que me enamoré",
+        "vote_average": 7.989,
+        "vote_count": 18330,
+        "homepage": "",
+        "revenue": 1921847111,
+        "runtime": 148,
+        "status": "Released",
+        "tagline": "Este verano, todo será diferente.",
+        "budget": 200000000
+    },
+    {
+        "id": "653035c2c61a4a32bd2724d287",
+        "image": "https://pdlibrosarg.cdnstatics2.com/usuaris/libros/thumbs/84b03a1d-978f-4238-9a65-33bef650906b/d_295_510/portada_after-1-aqui-empieza-todo_anna-todd_201901291633.webp",
+        "genres": [
+            "Romance",
+            "Drama"
+        ],
+        "original_language": "en",
+        "overview": "Tessa Young acaba de llegar a la universidad, y su estable y ordenada vida da un giro busco al conocer al misterioso Hardin Scott, cuyo pasado es algo oscuro. Aunque de entrada se odian, estos polos opuestos se unirán y nada volverá a ser como antes. Tendrán que enfrentarse amultiples pruebas como la inocencia y el descubrimiento sexual, para poder estar juntos.",
+        "popularity": 206.955,
+        "release_date": "12/15/2021",
+        "title": "After: Aquí empieza todo ",
+        "vote_average": 7.989,
+        "vote_count": 18330,
+        "homepage": "",
+        "revenue": 1921847111,
+        "runtime": 148,
+        "status": "Released",
+        "tagline": "¿Qué dirán si nos ven juntos?",
         "budget": 200000000
     }
 ]

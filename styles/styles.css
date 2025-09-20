@@ -105,20 +105,20 @@ header{
 
 /* Estilos para el texto de bienvenida */
 .section > div {
-  background: #f8f5ff;
-  border-radius: 12px;
-  padding: 2em 2em 1em 2em;
-  box-shadow: 0 2px 12px rgba(108,63,199,0.07);
-  margin-bottom: 2em;
+background: #f8f5ff;
+border-radius: 12px;
+padding: 2em 2em 1em 2em;
+box-shadow: 0 2px 12px rgba(108,63,199,0.07);
+margin-bottom: 2em;
 }
 
 .section > div p {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #18233F;
-  margin-bottom: 1.2em;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  letter-spacing: 0.5px;
+font-size: 1.3rem;
+line-height: 1.8;
+color: #18233F;
+margin-bottom: 1.2em;
+font-family: 'Segoe UI', 'Arial', sans-serif;
+letter-spacing: 0.5px;
 }
 
 @keyframes llenar-barra{
@@ -229,4 +229,157 @@ header{
     padding: 24px 0;
     font-size: 1.1rem;
     margin-top: 32px;
+}
+
+/*----------  MEDIA QUERIES ------------ */
+
+/* PC (>1200px) */
+@media screen and (min-width: 1200px) {
+
+    .section h2 {
+        width: 40%;
+        font-size: 2.2rem;
+        /* padding: 12px; */
+    }
+    .section > div {
+        padding: 2.5em 3em 2em 3em;
+    }
+    .section > div p {
+        font-size: 1.4rem;
+    }
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.3rem;
+        padding: 32px 0;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* ↓↓↓↓↓↓ MAIN (SECTION 1 ) ↓↓↓↓↓↓*/
+
+        .section h2 {
+        width: 55%;
+        font-size: 2rem;
+        padding: 10px;
+    }
+    .section > div {
+        padding: 2em 2em 1em 2em;
+    }
+    .section > div p {
+        font-size: 1.2rem;
+    }
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.15rem;
+        padding: 28px 0;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* ↓↓↓↓↓↓ MAIN (SECTION 1 ) ↓↓↓↓↓↓*/
+    .section h2 {
+        width: 80%;
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+    .section > div {
+        padding: 1.2em 1em 1em 1em;
+    }
+    .section > div p {
+        font-size: 1.05rem;
+    }
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+}
+
+/* Celular (<480px) */
+@media screen and (max-width: 480px) {
+
+    /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
+.header_item-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+        gap: 6px;
+    }
+    .header_logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 4px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 0.95rem;
+        gap: 4px;
+        padding: 4px 0;
+    }
+    .nav_item, .nav_link {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 2px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    /* ↓↓↓↓↓↓ MAIN (SECTION 1 ) ↓↓↓↓↓↓*/
+    .section h2 {
+        width: 95%;
+        font-size: 1.1rem;
+        padding: 6px;
+        border-radius: 18px;
+        animation-name: llenar-barra;
+    }
+    .section > div {
+        padding: 0.8em 0.5em 0.5em 0.5em;
+        margin-bottom: 1em;
+    }
+    .section > div p {
+        /* font-size: 0.95rem; */
+        margin-bottom: 0.7em;
+    }
+
+    @keyframes llenar-barra {
+        from {
+            width: 60%;
+            background-color: #AEB7CE;
+            color: #18233f;
+        }
+        to {
+            width: 80%;
+        }
+    }
+
+    /* ↓↓↓↓↓↓ MAIN (SECTION 2 ) ↓↓↓↓↓↓*/
+
+    .portfolio__tittle {
+        font-size: 1.4rem;
+        margin-bottom: 6px;
+        padding: 4px 0;
+        border-radius: 12px;
+        /* background: #2c3260; */
+        letter-spacing: 1px;
+    }
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 0.95rem;
+        padding: 14px 0;
+        margin-top: 16px;
+    }
+    .footer h3 {
+        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 1.3;
+    }
 }

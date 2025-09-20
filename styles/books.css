@@ -11,9 +11,9 @@
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
-      min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -105,7 +105,6 @@ header {
     flex-wrap: wrap;
     border-width: 2px;
     border-color: #4b5563;
-    background-color: #bfdbfe;
 }
 
 
@@ -121,25 +120,17 @@ header {
 /* CARD PRINCIPAL */
 .card {
     border: 2px solid black;
-    margin: 1.25rem;/* m-5 */
+    margin: 1.25rem;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* corregí el "beetwen" */
-    width: 20rem; /* w-80 */
+    justify-content: space-between; 
+    width: 20rem;
     text-align: center;
-    background-color: #ddd6fe; /* bg-violet-200 */
+    background-color: #ddd6fe; 
+    border-radius: 8px;
 }
-
-/* RESPONSIVE */
-/* @media (min-width: 640px) {
-  .card {
-    width: 66.666%; 
-    height: 83.333%; 
-  }
-} */
-
 
 /* IMAGEN */
 .card-img {
@@ -150,56 +141,53 @@ header {
     object-fit: contain;
 }
 
-/* @media (min-width: 640px) {
-  .card-img {
-    width: 15rem; 
-    height: 7rem;  
-  }
-} */
+
+.card a {
+    text-decoration: none;
+
+}
 
 /* TITULO */
 .card-title {
     font-weight: bold;
+    color: #991b1b;
 }
 
 /* TAGLINE */
 .card-tagline {
-    padding: 0.5rem; /* p-2 */
-    font-size: 0.75rem;/* text-xs */
+    padding: 0.5rem; 
+    font-size: 0.75rem;
     font-weight: bolder;
+    color: #1e40af; 
+
 }
 
-/* @media (min-width: 640px) {
-  .card-tagline {
-    padding: 0.25rem; 
-  }
-} */
 
 /* OVERVIEW */
 .card-overview {
-    padding: 0.75rem;/* p-3 */
+    padding: 0.75rem;
     font-size: 0.75rem;
     font-weight: bolder;
+    color: #1e40af; 
+
 }
 
-/* @media (min-width: 640px) {
-  .card-overview {
-    padding: 0.25rem; 
-  }
-} */
+
 
 /* CONTENEDOR DEL BOTON */
 .card-btn-container {
     display: flex;
     justify-content: center;
-    width: 3rem;/* w-12 */
-    border: 3px solid black;/* border-[3px] */
+    width: 3rem;
+    border: 3px solid black;
     margin-top: auto;
+    border-radius: 50%;
+
 }
 
 .card-btn-container:hover {
     border: 2px solid black;
-    color: #f9fafb; /* text-gray-50 */
+    color: #f9fafb; 
 }
 
 /* BOTÓN BASE */
@@ -208,25 +196,27 @@ header {
     padding: 0.5rem 1rem; 
     border: none;
     cursor: pointer;
+    border-radius: 50%;
+
 }
 
 /* ESTADOS DEL BOTON SEGUN JS */
 .btn-liked {
-    background-color: #ef4444;/* bg-orange-500 */
+    background-color: #ef4444;
     color: white;
 }
 
 .btn-liked:hover {
-    background-color: #991b1b;; /* hover:bg-orange-700 */
+    background-color: #991b1b;
 }
 
 .btn-not-liked {
-    background-color: #bbf7d0;/* bg-green-200 */
+    background-color: #bbf7d0;
     color: black;
 }
 
 .btn-not-liked:hover {
-    background-color: #374151; /* hover:bg-gray-700 */
+    background-color: #374151; 
     color: white;
 }
 
@@ -256,7 +246,6 @@ padding: 8px 16px;
 border-radius: 12px;
 background: #f3f0ff;
 font-size: 1.1rem;
-/* color: #6c3fc7; */
 width: 350px;
 border: none;
 }
@@ -275,4 +264,116 @@ border: none;
     padding: 24px 0;
     font-size: 1.1rem;
     margin-top: 32px;
+}
+
+/*----------  MEDIA QUERIES ------------ */
+/* PC (>1200px) */
+@media screen and (min-width: 1200px) {
+
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.3rem;
+        padding: 32px 0;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* ↓↓↓↓↓↓ MAIN INPUTS DE FILTRADO Y BUSQUEDA ↓↓↓↓↓↓*/
+    .search-input,
+    .option-inicial {
+        width: 250px;
+        font-size: 1rem;
+        margin-left: 2rem;
+        padding: 7px 12px;
+    }
+
+
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1.15rem;
+        padding: 28px 0;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* ↓↓↓↓↓↓ MAIN INPUTS DE FILTRADO Y BUSQUEDA ↓↓↓↓↓↓*/
+    .search-input,
+    .option-inicial {
+        width: 95vw;
+        font-size: 0.95rem;
+        margin-left: 0;
+        padding: 6px 8px;
+        border-radius: 14px;
+    }
+
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+}
+
+/* Celular (<480px) */
+@media screen and (max-width: 480px) {
+
+        /* ↓↓↓↓↓↓ HEADER ↓↓↓↓↓↓*/
+    .header_item-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+        gap: 6px;
+    }
+    .header_logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 4px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 0.95rem;
+        gap: 4px;
+        padding: 4px 0;
+    }
+    .nav_item, .nav_link {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 2px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+
+    
+
+    /* ↓↓↓↓↓↓ MAIN INPUTS DE FILTRADO Y BUSQUEDA ↓↓↓↓↓↓*/
+
+    .search-input,
+    .option-inicial {
+        width: 95vw;
+        font-size: 0.95rem;
+        margin-left: 0;
+        padding: 6px 8px;
+        border-radius: 14px;
+    }
+
+    /* ↓↓↓↓↓↓ FOOTER ↓↓↓↓↓↓*/
+    .footer {
+        font-size: 0.95rem;
+        padding: 14px 0;
+        margin-top: 16px;
+    }
+    .footer h3 {
+        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 1.3;
+    }
 }
