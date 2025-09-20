@@ -1,7 +1,7 @@
 # BookStack
 
 ## Descripción del proyecto
-BookStack es una aplicación web para gestión y exploración de libros, donde los usuarios pueden buscar, filtrar, marcar favoritos y completar formularios de registro. El proyecto está organizado en varias páginas y estilos, permitiendo una experiencia interactiva y responsiva.
+BookStack (tienda de libros ) es una aplicación web para gestión y exploración de libros, donde los usuarios pueden buscar, filtrar, marcar favoritos y completar formularios de registro. El proyecto está organizado en varias páginas y estilos, permitiendo una experiencia interactiva y responsiva.
 
 ## Tecnologías usadas
 - **HTML5**  
@@ -17,11 +17,11 @@ BookStack es una aplicación web para gestión y exploración de libros, donde l
 4. Para funcionalidades completas, asegúrate de tener los archivos en las rutas correctas y permisos para usar localStorage.
 
 ## Lista de funcionalidades implementadas
-- **Búsqueda y filtrado de libros** (`books.html`, `books.css`, `main.js`)
-- **Detalle de libros** (`detail.html`, `details.js`, `datails.css`)
-- **Favoritos** (marcar y ver favoritos, usando localStorage; `favs.html`, `favorite.js`, `favs.css`)
-- **Formulario de registro** con validaciones en tiempo real y envío simulado (`formulario.html`, `formulario.js`, `formulario.css`)
-- **Visualización de datos enviados** (`show_data.html`, `showdata.css`)
+- **Búsqueda y filtrado de libros** 
+- **Detalle de libros** (al hacer click en cualquiera de ellos , llevara a otra pagina donde mostrara su detalle )
+- **Favoritos** (marcar y ver favoritos, usando localStorage; )
+- **Formulario de registro** con validaciones en tiempo real y envío simulado 
+- **Visualización de datos enviados** 
 - **Responsive Design** en todas las páginas y componentes
 
 ## Lista de extras implementados
